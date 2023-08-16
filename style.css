@@ -275,6 +275,7 @@ body {
 
   opacity: 1;
   /* Specifies under what circumstances a given element can be the target element for a pointer event. */
+  /* make property use its default value */
   pointer-events: initial;
 }
 
