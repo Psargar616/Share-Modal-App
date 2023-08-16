@@ -1,6 +1,6 @@
 # Share-Modal-App using JS
-
-
+![Screenshot1](screenshots/screencapture-1.png)
+![Screenshot2](screenshots/screencapture-2.png)
 
 ## New learnings
 - Adding animations to circles to profile picture
