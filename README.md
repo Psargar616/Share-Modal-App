@@ -2,7 +2,7 @@
 ![Screenshot1](screenshots/screencapture-1.png)
 ![Screenshot2](screenshots/screencapture-2.png)
 
-## [Demo link]
+## Demo link
 [Click Here](https://psargar616.github.io/Share-Modal-App/)
 
 ## New learnings
