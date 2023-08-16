@@ -274,6 +274,7 @@ body {
 .overlayActive {
 
   opacity: 1;
+  /* Specifies under what circumstances a given element can be the target element for a pointer event. */
   pointer-events: initial;
 }
 
