@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle1 {
+  position: absolute;
+  top: 5%;
+  left: 30%;
+  width: 13em;
+  height: 13em;
+  border-radius: 50%;
+  box-shadow: 0 0 50px #d84869;
+  background: linear-gradient(-25deg, #d84869, #f46641);
+  animation: circle1Animate 15s infinite alternate-reverse;
+}
+
+.circle2 {
+  position: absolute;
+  bottom: 5%;
+  right: 30%;
+  width: 19em;
+  height: 19em;
+  border-radius: 50%;
+  box-shadow: 0 0 50px #5648d8;
+  background: linear-gradient(-25deg, #5648d8, #8641f4);
+  animation: circle2Animate 8s infinite alternate;
+}
+
+@keyframes circle1Animate {
+  50% {
+    left: 30%;
+    top: 4%;
+    scale: 1.2;
+  }
+}
+
+@keyframes circle2Animate {
+  50% {
+    bottom: 6%;
+    right: 35%;
+  }
+}
+
+/* card */
+
+.card-wrapper {
+  position: absolute;
+  /* centering card */
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  height: 500px;
+  border: 2px solid #ffffff30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #ffffff1a;
+  /* The backdrop-filter CSS property lets you apply graphical effects such as blurring or color shifting to the area behind an element. Because it applies to everything behind the element, to see the effect you must make the element or its background at least partially transparent. */
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  color: #ffffff;
+  padding: 20px 50px;
+}
+
+.card-wrapper div img {
+  border: 2px solid #ffffff30;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: all 1s ease-in-out;
+ 
+}
+
+.card-wrapper div img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ee0979;
+   
+}
+.designation h3 {
+  font-size: 2rem;
+  text-align: center;
+  color: #ffffff85;
+}
+.user-name h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.button-grp {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn-share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 12px;
+  background: #ffffff00;
+  border: 2px solid #ffffffb9;
+  text-transform: capitalize;
+  border-radius: 4px;
+  color: #ffffffb9;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn-follow {
+  font-weight: bold;
+  text-transform: capitalize;
+  width: 150px;
+  padding: 9px 12px;
+  background: #ffffff00;
+  border: 2px solid #ffffffb9;
+  border-radius: 4px;
+  color: #ffffffb9;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.btn-card:hover {
+  background: #ffffffb9;
+  color: #131313;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border: 2px solid #ffffff59;
+  width: 500px;
+  scale: 0;
+  background: #00000088;
+  backdrop-filter: blur(10px);
+  color: white;
+  z-index: 1;
+  padding: 20px 25px;
+  border-radius: 20px;
+  transition: 0.5s ease-in-out;
+}
+.modal-header {
+  display: flex;
+  margin-bottom: 25px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ffffff88;
+}
+/* close icon */
+.modal-header div i {
+  font-size: 30px;
+}
+.close {
+  cursor: pointer;
+}
+.icon-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.icon {
+  border: 1px solid #ffffff88;
+  padding: 25px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+  gap: 10px;
+  justify-content: center;
+  transition: all 0.5s;
+  margin-bottom: 25px;
+  text-decoration: none;
+}
+.icon i {
+  font-size: 30px;
+}
+
+#facebook {
+  color: #1771e6;
+  border: 1px solid #1771e6;
+}
+#facebook:hover {
+  background-color: #1771e6;
+  color: #fff;
+}
+
+#twitter {
+  color: #1c99e6;
+  border: 1px solid #1c99e6;
+}
+#twitter:hover {
+  background-color: #1c99e6;
+  color: #fff;
+}
+
+#instagram {
+  color: #cb2770;
+  border: 1px solid #cb2770;
+}
+#instagram:hover {
+  background-color: #cb2770;
+  color: #fff;
+}
+
+#whatsapp {
+  color: #2fe664;
+  border: 1px solid #2fe664;
+}
+#whatsapp:hover {
+  background-color: #2fe664;
+  color: #fff;
+}
+
+#telegram {
+  color: #0081c2;
+  border: 1px solid #0081c2;
+}
+#telegram:hover {
+  background-color: #0081c2;
+  color: #fff;
+}
+
+.active {
+  scale: 1;
+}
+
+.overlay {
+  position: fixed;
+  background-color: #5f5f5f83;
+  top: 0;
+  opacity: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  transition: 0.5s ease-in-out;
+}
+
+.overlayActive {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+@media (max-width: 768px) {
+  .card-wrapper {
+    max-width: 250px;
+    width: 300px;
+  }
+  .button-grp {
+    flex-direction: column;
+  }
+  .modal {
+    width: 80vw;
+  }
+  .user-name h2,
+  .designation h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 426px) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-wrapper {
+    position: static;
+    top: 0;
+    left: 0;
+    translate: 0 0;
+    margin: 0 12px;
+    padding: 0 10px;
+  }
+  .card-wrapper div img {
+    width: 120px;
+    height: 120px;
+  }
+  .user-name h2,
+  .designation h2 {
+    font-size: 1.3rem;
+  }
+  .modal {
+    width: 80vw;
+  }
+}
